@@ -38,7 +38,7 @@ final class RegexParser implements ParserInterface
         // loop instead of array_map to pass the arguments explicitly
         $shortcodes = array();
         foreach($matches[0] as $match) {
-            $offset = mb_strlen(substr($text, 0, $match[1]), 'utf-8');
+            $offset = mb_strlen(substr($text, 0, $match[1]));
             $shortcodes[] = $this->parseSingle($match[0], $offset);
         }
 
